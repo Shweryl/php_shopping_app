@@ -29,7 +29,7 @@ if (!empty($_GET['pageno'])) {
 } else {
     $pageno = 1;
 }
-$numOfRecord = 1;
+$numOfRecord = 5;
 $offset = ($pageno - 1) * $numOfRecord;
 
 if (empty($_POST['search']) && empty($_COOKIE['search'])) {

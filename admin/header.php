@@ -115,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="index.php" class="nav-link">
+              <a href="index.php" class="nav-link <?php if($page == 'index.php') echo 'active'; ?>">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Products
@@ -123,7 +123,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
             </li>
             <li class="nav-item">
-              <a href="category.php" class="nav-link">
+              <a href="category.php" class="nav-link <?php if($page == 'category.php') echo 'active'; ?>">
                 <i class="nav-icon fas fa-list"></i>
                 <p>
                   Category
@@ -131,7 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
             </li>
             <li class="nav-item">
-              <a href="user_list.php" class="nav-link">
+              <a href="user_list.php" class="nav-link <?php if($page == 'user_list.php') echo 'active'; ?>">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   User
@@ -139,8 +139,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
             </li>
             <li class="nav-item">
-              <a href="order_list.php" class="nav-link">
-                <i class="nav-icon fas fa-list"></i>
+              <a href="order_list.php" class="nav-link <?php if($page == 'order_list.php') echo 'active'; ?>">
+                <i class="nav-icon fas fa-window-restore"></i>
                 <p>
                   Order
                 </p>
@@ -156,25 +156,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="weekly_report.php" class="nav-link">
+                  <a href="weekly_report.php" class="nav-link <?php if($page == 'weekly_report.php') echo 'active'; ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Weekly Report</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="monthly_report.php" class="nav-link">
+                  <a href="monthly_report.php" class="nav-link <?php if($page == 'monthly_report.php') echo 'active'; ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Monthly Report</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="royal_customer.php" class="nav-link">
+                  <a href="royal_customer.php" class="nav-link <?php if($page == 'royal_customer.php') echo 'active'; ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Royal Customer</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="best_seller.php" class="nav-link">
+                  <a href="best_seller.php" class="nav-link <?php if($page == 'best_seller.php') echo 'active'; ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Bester Seller</p>
                   </a>

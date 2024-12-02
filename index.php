@@ -29,7 +29,7 @@ if (!empty($_GET['pageno'])) {
 } else {
 	$pageno = 1;
 }
-$numOfRecord = 5;
+$numOfRecord = 10;
 $offset = ($pageno - 1) * $numOfRecord;
 
 if (empty($_POST['search']) && empty($_COOKIE['search'])) {
@@ -37,7 +37,7 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
 		$stmp = $pdo->prepare("SELECT * FROM products WHERE quantity != 0 ORDER BY id DESC");
 	} else {
 		$category = empty($_GET['category']) ? $_COOKIE['category'] : $_GET['category'];
-		$stmp = $pdo->prepare("SELECT * FROM products WHERE category_id='$category' AND WHERE quantity != 0 ORDER BY id DESC");
+		$stmp = $pdo->prepare("SELECT * FROM products WHERE category_id='$category' AND quantity != 0 ORDER BY id DESC");
 	}
 
 	$stmp->execute();
@@ -48,7 +48,7 @@ if (empty($_POST['search']) && empty($_COOKIE['search'])) {
 		$stmt = $pdo->prepare("SELECT * FROM products WHERE quantity != 0 ORDER BY id DESC LIMIT $offset,$numOfRecord");
 	} else {
 		$category = empty($_GET['category']) ? $_COOKIE['category'] : $_GET['category'];
-		$stmt = $pdo->prepare("SELECT * FROM products WHERE category_id='$category' AND WHERE quantity != 0 ORDER BY id DESC LIMIT $offset,$numOfRecord");
+		$stmt = $pdo->prepare("SELECT * FROM products WHERE category_id='$category' AND quantity != 0 ORDER BY id DESC LIMIT $offset,$numOfRecord");
 	}
 
 	$stmt->execute();
